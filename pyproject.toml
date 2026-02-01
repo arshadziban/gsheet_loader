@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "gsheet-loader"
-version = "1.0.1"
+version = "1.0.2"
 description = "A simple package to load Google Sheets into pandas DataFrame"
 readme = "README.md"
 authors = [
@@ -33,3 +33,7 @@ dependencies = [
 [project.urls]
 Homepage = "https://github.com/arshadziban/gsheet_loader"
 Repository = "https://github.com/arshadziban/gsheet_loader"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["gsheet_loader*"]

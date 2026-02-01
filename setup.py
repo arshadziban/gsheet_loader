@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="gsheet-loader",
-    version="1.0.1",
+    version="1.0.2",
     author="Arshad Ziban",
     author_email="arshadziban031201@gmail.com",
     description="A simple package to load Google Sheets into pandas DataFrame",
