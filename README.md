@@ -27,7 +27,21 @@ data = load_sheet(url)
 df = pd.read_csv(data)
 ```
 
+### Load directly into a DataFrame
+
+```python
+from gsheet_loader import load_df
+
+df = load_df("google sheet url here")
+```
+
+Extra keyword arguments are passed to `pd.read_csv` (e.g. `load_df(url, dtype=str)`).
+
 ## API Reference
+
+### `load_df(sheet_url, **kwargs)`
+
+Load a Google Sheet and return a pandas `DataFrame`. Keyword arguments are passed to `pd.read_csv`.
 
 ### `load_sheet(sheet_url)`
 
@@ -53,4 +67,4 @@ Arshad Ziban
 
 ## Version
 
-1.0.2
+1.1.0

@@ -1,4 +1,5 @@
 import re
+import pandas as pd
 import requests
 from io import StringIO
 
@@ -24,6 +25,14 @@ def load_sheet(sheet_url: str) -> StringIO:
     response.raise_for_status()
     
     return StringIO(response.text)
+
+
+def load_df(sheet_url: str, **kwargs) -> pd.DataFrame:
+    """Load a public Google Sheet directly into a pandas DataFrame.
+
+    Extra keyword arguments are passed to ``pd.read_csv``.
+    """
+    return pd.read_csv(load_sheet(sheet_url), **kwargs)
 
 
 def get_sheet_id(sheet_url: str) -> str:
